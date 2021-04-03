@@ -37,7 +37,6 @@ def columns_name(word):
     word_without_special_char = word_without_special_char.replace( '(' , '_'  )
     word_without_special_char = word_without_special_char.replace( ')' , '_')
     word_without_special_char = word_without_special_char.replace(' ' , '')
-    word_without_special_char = word_without_special_char.replace('.','_')
     return word_without_special_char ; 
 
 
@@ -47,7 +46,7 @@ if __name__=='__main__':
     DataSet = create_dataframe( rows = list_data )
     names = [ columns_name( col ) for col in DataSet.columns ]
     DataSet.columns = names 
-    DataSet.to_csv( 'DataSet_Fii.csv' , index=False )
+    print(DataSet) 
 
 
 
